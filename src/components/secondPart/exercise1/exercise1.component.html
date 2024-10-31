@@ -1,0 +1,5 @@
+<h3>Ejercicio 1</h3>
+
+<app-table-filters (studentNameChange)="updateStudentNameFilter($event)" (statusSelectedChange)="updateStatusFilter($event)"></app-table-filters>
+
+<app-notas [filterStudentName]="filterStudentName" [filterStatus]="filterStatus"></app-notas>

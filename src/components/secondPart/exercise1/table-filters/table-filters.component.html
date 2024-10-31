@@ -1,0 +1,21 @@
+<mat-card appearance="outlined" class="mb-10">
+  <mat-card-header>
+    <mat-card-title>Aplicar Filtros</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions class="flex gap-8 mx-4 my-2">
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Nombre del estudiante</mat-label>
+      <input [(ngModel)]="studentName" (ngModelChange)="onStudentNameChange($event)" matInput>
+      <mat-icon matPrefix>school</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="w-full">
+      <mat-icon matPrefix>equalizer</mat-icon>
+      <mat-label>Estado del estudiante</mat-label>
+      <mat-select [(value)]="statusSelected" (selectionChange)="onStatusSelectedChange()">
+        <mat-option value="all">Todos</mat-option>
+        <mat-option value="Aprobado">Aprobados</mat-option>
+        <mat-option value="Suspendido">Suspendidos</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-actions>
+</mat-card>
